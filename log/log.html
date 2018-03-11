@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户登录</title>
+<link type="text/css" href="../assess/css/log.css" rel="stylesheet" />
+<script language="javascript" type="text/javascript">
+	function sub(obj){
+		if(obj.username.value==""){
+			alert("账号不能为空，请重新输入");
+			obj.username.focus();
+			return false;
+		}else if(obj.pwd.value==""){
+			alert("密码不能为空，请重新输入");
+			obj.pwd.focus();
+			return false;
+		}
+		}
+</script>
+</head>
+
+<body>
+<div id="head">
+	<img src="../assess/images/e.jpg" />
+</div>
+<div id="user_login">
+	<div id="background">
+    	<form id="user_submit" name="user_submit" action="login_deal.php" method="post">
+    	<p>用户登录</p>
+        <div class="user_text">
+            账号：<input type="text" id="username" name="username"  />
+        </div>
+        <div class="user_text">
+            密码：<input type="password" id="pwd" name="pwd" />
+        </div>
+        <div class="user_sub">
+            <input type="submit" name="login" id="submit" value="登录" onclick="return sub(user_submit)"/>
+        </div>
+        </form>
+    </div>
+</div>
+<div id="footer">
+	<p>吉林大学电子工程系版权所有&copy;</p>
+    <p>地址 ：吉林省长春市南湖大路5372号 &nbsp; &nbsp; &nbsp; 邮编 ：130012</p>
+
+</div>
+
+</body>
+</html>
